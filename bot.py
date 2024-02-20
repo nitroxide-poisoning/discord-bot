@@ -1,9 +1,8 @@
-BOT_TOKEN = "MTIwOTIzNzE2NjQ1NTAwMTE3OA.GOVcWF.2jDhvx5p90tHgUrOFxnm5TmhuVnnGj6XKMuzvA"
-
-# This example requires the 'message_content' intent.
+# main code for bot
 
 import discord
 import random
+import os
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -94,4 +93,4 @@ def pickupgen(name):
     ]
     return random.choice(quotes)
 
-client.run(BOT_TOKEN)
+client.run(os.getenv('D_TOKEN'))
